@@ -11,6 +11,23 @@ var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" 
 
 var app = express();
 
+//Import the mongoose module
+var mongoose = require('mongoose');
+require('dotenv').config()
+
+//Set up default mongoose connection
+var mongoDB = process.env.DATABASE_URL;
+console.log(mongoDB)
+mongoose.connect(mongoDB, {useNewUrlParser: true});
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -20,6 +37,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
