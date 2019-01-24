@@ -22,5 +22,8 @@
   "homepage": "https://github.com/antero71/library_mozilla_tutorial#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1"
   }
 }
