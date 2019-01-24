@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/antero71/library_mozilla_tutorial/issues"
   },
-  "homepage": "https://github.com/antero71/library_mozilla_tutorial#readme"
+  "homepage": "https://github.com/antero71/library_mozilla_tutorial#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
