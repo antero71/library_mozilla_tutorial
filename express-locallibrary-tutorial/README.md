@@ -22,4 +22,6 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms/
 I have added the book update page.
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 
+I have added detele bookitem function.
 
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms
